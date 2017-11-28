@@ -3,7 +3,7 @@ container creation by default. After configuring gogs as you want on your local
 container you can move those 3 directories  to  26635-ATTM-EDI/docker/gogs.
 These diectories will be moved inside container during deployment.
 
-'''
+```
 /data
 ├── conf
 │   └── app.ini
@@ -11,9 +11,10 @@ These diectories will be moved inside container during deployment.
 │   ├── gogs.db
 └── git
     └── gogs-repositories
-'''
+```
 
 I have changed  as shown below.   
+```
   - name: create the VCS volumes
     with_items:
       #- /data/gogs_data/conf  
@@ -29,3 +30,4 @@ I have changed  as shown below.
       src: templates/app.ini.j2
       #dest: /data/gogs_data/conf/app.ini
       dest: /data/gogs_data/gogs/conf/app.ini
+```
